@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div>
+        <div class="title">Memory Card Game</div>
+        <div class="meta">Flip cards and match pairs — built with HTML, CSS & vanilla JS</div>
+      </div>
+
+      <div class="controls">
+        <div class="stats">
+          <div>Moves: <strong id="moves">0</strong></div>
+          <div>•</div>
+          <div>Time: <strong id="timer">00:00</strong></div>
+          <div>•</div>
+          <div>Best: <strong id="best">--</strong></div>
+        </div>
+        <button id="shuffleBtn">Shuffle</button>
+        <button id="restartBtn" class="primary">Restart</button>
+      </div>
+    </header>
+
+    <section class="board" id="board" aria-live="polite"></section>
+
+    <div class="footer">
+      <div class="muted">Tip: Try to finish in the fewest moves — matches save best time.</div>
+      <div class="muted">Grid: responsive (6 columns on wide screens, 4 on small screens)</div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <h2>🎉 You won!</h2>
+      <div class="big" id="finalMoves">Moves: 0</div>
+      <div class="small" id="finalTime">Time: 00:00</div>
+      <div class="small" id="finalBest"></div>
+      <div style="margin-top:12px;">
+        <button id="playAgain" class="primary">Play Again</button>
+        <button id="closeModal" style="margin-left:8px">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
